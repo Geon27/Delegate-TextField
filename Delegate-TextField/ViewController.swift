@@ -17,5 +17,13 @@ class ViewController: UIViewController {
         self.tf.keyboardAppearance = UIKeyboardAppearance.dark // 키보드 스타일 어둡게
         self.tf.returnKeyType = UIReturnKeyType.join // 리턴키 타입은 "Join"
         self.tf.enablesReturnKeyAutomatically = true // 리턴키 자동 활성화 "True"
+        
+        /**
+         * 스타일 설정
+         */
+        // 테두리 스타일 - 직선
+        self.tf.borderStyle = UITextField.BorderStyle.line
+        // 배경색상
+        self.tf.backgroundColor = UIColor(white:0.87, alpha: 1.0)
     }
 }
