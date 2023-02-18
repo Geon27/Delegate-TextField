@@ -25,5 +25,13 @@ class ViewController: UIViewController {
         self.tf.borderStyle = UITextField.BorderStyle.line
         // 배경색상
         self.tf.backgroundColor = UIColor(white:0.87, alpha: 1.0)
+        // 수직 방향으로 텍스트가 가운데 정렬되도록
+        self.tf.contentVerticalAlignment = .center
+        // 수평 방향으로 텍스트가 가운데 정렬되도록
+        self.tf.contentHorizontalAlignment = .center
+        // 테두리 색상을 회색으로
+        self.tf.layer.borderColor = UIColor.darkGray.cgColor
+        // 테두리 두께 설정 (단위 : pt)
+        self.tf.layer.borderWidth = 2.0
     }
 }
