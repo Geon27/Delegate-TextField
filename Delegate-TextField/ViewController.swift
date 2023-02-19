@@ -33,5 +33,8 @@ class ViewController: UIViewController {
         self.tf.layer.borderColor = UIColor.darkGray.cgColor
         // 테두리 두께 설정 (단위 : pt)
         self.tf.layer.borderWidth = 2.0
+        
+        // 텍스트 필드를 최초 응답자로 지정
+        self.tf.becomeFirstResponder()
     }
 }
