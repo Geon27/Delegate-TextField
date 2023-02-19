@@ -37,4 +37,8 @@ class ViewController: UIViewController {
         // 텍스트 필드를 최초 응답자로 지정
         self.tf.becomeFirstResponder()
     }
+    
+    @IBAction func confirm(_ sender: Any) {
+        
+    }
 }
