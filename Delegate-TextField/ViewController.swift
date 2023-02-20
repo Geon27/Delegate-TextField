@@ -36,9 +36,16 @@ class ViewController: UIViewController {
         
         // 텍스트 필드를 최초 응답자로 지정
         self.tf.becomeFirstResponder()
+       
     }
     
     @IBAction func confirm(_ sender: Any) {
-        
+        // 텍스트 필드를 최초 응답자 객체에서 해제
+        self.tf.resignFirstResponder()
+    }
+    
+    @IBAction func input(_ sender: Any) {
+        // 텍스트필드를 최초 응답자 객체로 지정
+        self.tf.becomeFirstResponder()
     }
 }
