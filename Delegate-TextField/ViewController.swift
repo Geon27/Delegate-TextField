@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var tf: UITextField!
     
     override func viewDidLoad() {
@@ -36,6 +36,9 @@ class ViewController: UIViewController {
         
         // 텍스트 필드를 최초 응답자로 지정
         self.tf.becomeFirstResponder()
+        
+        // 델리게이트 지정
+        self.tf.delegate = self
        
     }
     
