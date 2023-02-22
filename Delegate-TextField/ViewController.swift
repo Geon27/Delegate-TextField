@@ -10,6 +10,12 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var tf: UITextField!
     
+    // 텍스트 필드의 편집을 시작할때 호출
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("텍스트 필드의 편집이 시작됩니다.")
+        return true //false를 리턴하면 편집x
+    }
+    
     override func viewDidLoad() {
         // 텍스트 필드 속성 설정
         self.tf.placeholder = "값을 입력하세요" // 안내 메시지
