@@ -16,6 +16,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true //false를 리턴하면 편집x
     }
     
+    // 텍스트 필드의 편집이 시작된 후 호출
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("텍스트 필드의 편집이 시작되었습니다.")
+    }
+    
     override func viewDidLoad() {
         // 텍스트 필드 속성 설정
         self.tf.placeholder = "값을 입력하세요" // 안내 메시지
