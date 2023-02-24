@@ -20,6 +20,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("텍스트 필드의 편집이 시작되었습니다.")
     }
+    // 텍스트 필드의 내용이 삭제될 때 호출
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("텍스트 필드의 내용이 삭제됩니다")
+        return true // false를 리턴하면 삭제되지 않는다.
+    }
     
     override func viewDidLoad() {
         // 텍스트 필드 속성 설정
