@@ -25,6 +25,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("텍스트 필드의 내용이 삭제됩니다")
         return true // false를 리턴하면 삭제되지 않는다.
     }
+    // 텍스트 필드의 내용이 변경될때 호출
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        print("택스트 필드의 내용이 \(string)으로 변경됩니다")
+        return true // false를 리턴하면 내용이 변경되지 않는다.
+    }
     
     override func viewDidLoad() {
         // 텍스트 필드 속성 설정
