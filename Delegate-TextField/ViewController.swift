@@ -31,6 +31,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("택스트 필드의 내용이 \(string)으로 변경됩니다")
         return true // false를 리턴하면 내용이 변경되지 않는다.
     }
+    // 텍스트 필드의 리턴키가 눌렸을때 호출
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print("텍스트 필드의 리턴키가 눌러졌습니다")
+        return true
+    }
     
     override func viewDidLoad() {
         // 텍스트 필드 속성 설정
