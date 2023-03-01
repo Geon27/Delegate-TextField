@@ -43,6 +43,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true // false를 반환하면 편집이 종료되지 않는다.
     }
     
+    // 텍스트 필드의 편집이 종료되었을때 호출
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("텍스트 필드의 편집이 종료됩니다.")
+    }
+    
     override func viewDidLoad() {
         // 텍스트 필드 속성 설정
         self.tf.placeholder = "값을 입력하세요" // 안내 메시지
