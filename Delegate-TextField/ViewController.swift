@@ -89,4 +89,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // 텍스트필드를 최초 응답자 객체로 지정
         self.tf.becomeFirstResponder()
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range:
+                   NSRange, replacementString string: String) -> Bool {
+        print("텍스트 필드의 내용이 \(string)으로 변경됩니다")
+        if Int(string) == nil {
+            return true
+        } else {
+            return false
+        }
+    }
 }
