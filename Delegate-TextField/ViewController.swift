@@ -56,6 +56,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.tf.returnKeyType = UIReturnKeyType.join // 리턴키 타입은 "Join"
         self.tf.enablesReturnKeyAutomatically = true // 리턴키 자동 활성화 "True"
         
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range:
+                       NSRange, replacementString string: String) -> Bool {
+            print("텍스트 필드의 내용이 \(string)으로 변경됩니다")
+            if Int(string) == nil {
+                // 현재 텍스트 필드에 입련된 길이와 더해질 문자열 길이의 합이 10을 넘는다면 반영하지 않음
+                if(textField.text?.count)! + string.count > 10 {
+                    return false
+                } else {
+                    return true
+                }
+            } else { // 입력된 값이 숫자라면 false를 리턴
+                return false
+            }
+        }
+
         /**
          * 스타일 설정
          */
@@ -88,15 +103,5 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func input(_ sender: Any) {
         // 텍스트필드를 최초 응답자 객체로 지정
         self.tf.becomeFirstResponder()
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range:
-                   NSRange, replacementString string: String) -> Bool {
-        print("텍스트 필드의 내용이 \(string)으로 변경됩니다")
-        if Int(string) == nil {
-            return true
-        } else {
-            return false
-        }
     }
 }
